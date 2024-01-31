@@ -33,4 +33,6 @@ li i {
   margin-right: 10px;
   font-size: 2rem;
   color: red;
+
+  cursor: pointer;
 }

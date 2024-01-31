@@ -49,9 +49,9 @@
         <div class="row justify-content-center">
           <div class="col-6">
             <ul class="p-0">
-              <li v-for="task in tasks">
+              <li v-for="(task, index) in tasks">
                 <span :class="task.done ? `done` : ``">{{task.text}}</span>
-                <i class="fa-regular fa-circle-xmark"></i>
+                <i @click="removeTask()" class="fa-regular fa-circle-xmark"></i>
               </li>
             </ul>
           </div>
