@@ -17,6 +17,11 @@ createApp({
         text: "",
         done: false,
       },
+
+      error: {
+        status: false,
+        text: "Inserisci un testo con almeno 3 caratteri",
+      },
     };
   },
 
@@ -26,10 +31,19 @@ createApp({
     },
 
     createTask() {
-      const newTaskCopy = { ...this.newTask };
-      this.tasks.push(newTaskCopy);
+      if (this.newTask.text.length < 3) {
+        this.error.status = true;
+      } else {
+        const newTaskCopy = { ...this.newTask };
+        this.tasks.push(newTaskCopy);
 
-      this.newTask.text = "";
+        this.error.status = false;
+        this.newTask.text = "";
+      }
+    },
+
+    changeStatus(task) {
+      task.done = !task.done;
     },
   },
 }).mount("#app");

@@ -23,6 +23,8 @@ li {
 
 li span {
   margin-left: 10px;
+
+  cursor: pointer;
 }
 
 span.done {
