@@ -52,6 +52,7 @@
             >Inserisci il nuovo task da aggiungere alla lista</label
           >
           <input
+            @keyup.enter="createTask()"
             v-model.trim="newTask.text"
             type="text"
             class="form-control border border-2"
