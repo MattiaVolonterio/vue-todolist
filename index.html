@@ -46,12 +46,16 @@
       <div class="container">
         <h1 id="title">To Do List</h1>
 
-        <ul class="d-flex justify-content-center p-0">
-          <li>
-            <span class="done">prima cosa da fare</span>
-            <i class="fa-regular fa-circle-xmark"></i>
-          </li>
-        </ul>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <ul class="p-0">
+              <li v-for="task in tasks">
+                <span :class="task.done ? `done` : ``">{{task.text}}</span>
+                <i class="fa-regular fa-circle-xmark"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>

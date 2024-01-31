@@ -2,6 +2,16 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {};
+    return {
+      tasks: [
+        { text: "Fare la doccia", done: true },
+        { text: "Fare la spesa", done: false },
+        { text: "Comprare un gratta e vinci", done: false },
+        { text: "Aggiornare il PC", done: false },
+        { text: "Preparare il pranzo", done: true },
+        { text: "Andare in palestra", done: false },
+        { text: "Giocare al pc", done: true },
+      ],
+    };
   },
 }).mount("#app");
