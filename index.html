@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>...</title>
+    <title>Vue To Do List</title>
 
     <!-- Link Fontawesome -->
     <link
@@ -42,6 +42,17 @@
 
   <body>
     <!-- app container declaration -->
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <h1 id="title">To Do List</h1>
+
+        <ul class="d-flex justify-content-center p-0">
+          <li>
+            <span class="done">prima cosa da fare</span>
+            <i class="fa-regular fa-circle-xmark"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
